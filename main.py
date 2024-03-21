@@ -38,7 +38,7 @@ def index_page():
         )
         response = giga(messages)
         messages.append(response)
-        return render_template('index.html', feedback=response.content)
+        return render_template('index.html', feedback=response.content, name=name, creteries=creteries, course_name=course_name)
 
 
 if __name__ == '__main__':

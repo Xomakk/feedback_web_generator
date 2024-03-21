@@ -13,15 +13,15 @@
         <form action="/" method="post" class="mb-5">
             <div class="mb-3">
                 <label for="name" class="form-label">Имя ученика:</label>
-                <input type="text" class="form-control" name="name" id="name">
+                <input type="text" class="form-control" name="name" id="name" {% if name %} value="{{ name }}" {% endif %}>
             </div>
             <div class="mb-3">
                 <label for="course_name" class="form-label">Название курса:</label>
-                <input type="text" class="form-control" name="course_name" id="course_name">
+                <input type="text" class="form-control" name="course_name" id="course_name" {% if course_name %} value="{{ course_name }}" {% endif %}>
             </div>
             <div class="mb-3">
                 <label for="creteries" class="form-label">Ключевые характеристики (указывайте через запятую):</label>
-                <textarea type="text" class="form-control" name="creteries" id="creteries"></textarea>
+                <textarea type="text" class="form-control" name="creteries" id="creteries">{% if creteries %} {{ creteries }} {% endif %}</textarea>
             </div>
             <button class="btn btn-primary">Создать</button>
         </form>
