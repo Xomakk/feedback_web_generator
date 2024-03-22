@@ -17,3 +17,6 @@ COPY . .
 RUN pip install -r requirements.txt
 
 RUN chmod +x startapp.sh
+
+EXPOSE 5000
+ENTRYPOINT [ "./startapp.sh" ]
